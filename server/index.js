@@ -50,6 +50,29 @@ app.post('/signup', async (req, res) => {
   })
 })
 
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body
+
+  const user = await User.findOne({
+    email,
+    password
+  })
+
+  if (user) {
+    res.send({
+      success: true,
+      data: user,
+      message: "User logged in successfully",
+    })
+  }
+  else {
+    res.send({
+      success: false,
+      data: "Wrong Credentials! Please try again."
+    })
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
 });
