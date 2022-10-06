@@ -1,13 +1,22 @@
 import './App.css';
+import Home from './components/Home/Home';
+import Signup from './components/Signup/Signup';
+import Login from './components/Login/Login';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="container">
-      {/* Remove this code and place your own code here. */}
-      <div class="d-flex align-items-center justify-content-center" style={{height: '80vh'}}>
-        <h1>MERN Starter is Up and Running 🚀</h1>
-      </div>
-    </div>
+   <BrowserRouter>
+   <Routes>
+   <Route path="/" element={<Home/>}/>
+   <Route path='/signup' element={<Signup/>} />
+   <Route path='/login' element={<Login/>} />
+   </Routes>
+   </BrowserRouter>
   );
 }
 
