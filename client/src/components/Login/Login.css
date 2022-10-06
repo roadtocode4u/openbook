@@ -1,0 +1,7 @@
+.card{
+    box-shadow: 5px 5px 10px 2px gray;
+}
+.header-display-img{
+    max-height: 200px;
+    min-height: 250px;
+}
