@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Signup.css';
+import axios from 'axios';
+import swal from "sweetalert";
 import headerImage from "./img/signup-girl.png"
 
 function Signup() {
+
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [mobile, setMobile] = useState("");
+
+  async function addUser() {
+    await axios.post('/signup', {
+      fullName: fullName,
+      email: email,
+      password: password,
+      mobile: mobile
+    })
+
+    setFullName("");
+    setEmail("");
+    setPassword("");
+    setMobile("");
+
+    swal("User added Successfully")
+  }
+
   return (
     <>
       <div className='container card mt-5'>
@@ -29,6 +53,7 @@ function Signup() {
                   className="form-control"
                   id="fullName"
                   placeholder='FullName'
+                  value={fullName} onChange={(e) => { setFullName(e.target.value) }}
                 />
               </div>
               <div className="mb-3">
@@ -37,6 +62,7 @@ function Signup() {
                   className="form-control"
                   id="email"
                   placeholder="Email"
+                  value={email} onChange={(e) => { setEmail(e.target.value) }}
                 />
               </div>
               <div className="mb-3">
@@ -45,6 +71,7 @@ function Signup() {
                   className="form-control"
                   id="password"
                   placeholder="Password"
+                  value={password} onChange={(e) => { setPassword(e.target.value) }}
                 />
               </div>
               <div className="mb-3">
@@ -53,9 +80,10 @@ function Signup() {
                   className="form-control"
                   id="mobile"
                   placeholder="Mobile Number"
+                  value={mobile} onChange={(e) => { setMobile(e.target.value) }}
                 />
               </div>
-              <button className="btn btn-warning w-100 mb-5" type="button">
+              <button className="btn btn-warning w-100 mb-5" type="button" onClick={addUser}>
                 <i class="fa-solid fa-right-to-bracket"></i> Signup
               </button>
             </form>
