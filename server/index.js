@@ -2,6 +2,7 @@ import express from 'express';
 import dotennv from 'dotenv';
 import path from 'path';
 import mongoose from 'mongoose';
+import md5 from 'md5';
 import User from './models/User.js';
 
 dotennv.config();
@@ -39,7 +40,7 @@ app.post('/signup', async (req, res) => {
   const newUser = new User({
     fullName,
     email,
-    password,
+    password: md5(password),
     mobile
   })
   const savedUser = await newUser.save();
@@ -55,7 +56,7 @@ app.post('/login', async (req, res) => {
 
   const user = await User.findOne({
     email,
-    password
+    password: md5(password)
   })
 
   if (user) {
