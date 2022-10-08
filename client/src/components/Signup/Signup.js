@@ -24,7 +24,7 @@ function Signup() {
     setPassword("");
     setMobile("");
 
-    swal("User added Successfully")
+    swal("Signup Successfully !!");
   }
 
   return (
