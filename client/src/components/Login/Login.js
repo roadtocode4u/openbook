@@ -1,8 +1,32 @@
-import React from 'react'
-import './Login.css'
-import headerImage from './img/header-login-img.png'
+import React, { useState } from 'react';
+import './Login.css';
+import axios from 'axios';
+import swal from "sweetalert";
+import headerImage from './img/header-login-img.png';
 
 function Login() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function checkLogin() {
+    const response = await axios.post('/login', {
+      email: email,
+      password: password
+    })
+
+    if (response.data.success) {
+      swal("Login Successfully !!");
+    }
+    else {
+      swal(response.data.message)
+    }
+
+      setEmail("");
+      setPassword("")
+  }
+
+
   return (
     <>
       <div className='container card mt-5'>
@@ -16,6 +40,7 @@ function Login() {
                   className="form-control"
                   id="email"
                   placeholder="Email"
+                  value={email} onChange={(e) => { setEmail(e.target.value) }}
                 />
               </div>
               <div className="mb-3">
@@ -24,9 +49,10 @@ function Login() {
                   className="form-control"
                   id="password"
                   placeholder="Password"
+                  value={password} onChange={(e) => { setPassword(e.target.value) }}
                 />
               </div>
-              <button className="btn btn-warning w-100 mb-3" type="button">
+              <button className="btn btn-warning w-100 mb-3" type="button" onClick={checkLogin}>
                 <i class="fa-solid fa-right-to-bracket"></i> Login
               </button>
             </form>

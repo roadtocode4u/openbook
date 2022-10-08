@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './Signup.css';
 import axios from 'axios';
 import swal from "sweetalert";
-import headerImage from "./img/signup-girl.png"
+import headerImage from "./img/signup-girl.png";
 
 function Signup() {
 
@@ -12,19 +12,25 @@ function Signup() {
   const [mobile, setMobile] = useState("");
 
   async function addUser() {
-    await axios.post('/signup', {
+    const response = await axios.post('/signup', {
       fullName: fullName,
       email: email,
       password: password,
       mobile: mobile
     })
 
+    if(response.data.success)
+    {
+      swal("Signup Successfully !!");
+    }
+    else{
+      swal(response.data.message)
+    }
+
     setFullName("");
     setEmail("");
     setPassword("");
     setMobile("");
-
-    swal("Signup Successfully !!");
   }
 
   return (
