@@ -2,8 +2,10 @@ import express from 'express';
 import dotennv from 'dotenv';
 import path from 'path';
 import mongoose from 'mongoose';
-import md5 from 'md5';
-import User from './models/User.js';
+
+import { health } from './controllers/health.js';
+import { signupPost } from './controllers/signup.js';
+import { loginPost } from './controllers/login.js'
 
 dotennv.config();
 const app = express();
@@ -27,90 +29,11 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.get('/health', (req, res) => {
-  res.json({
-    status: 'ok',
-    message: 'Server is running'
-  })
-})
+app.get('/health', health)
 
-app.post('/signup', async (req, res) => {
-  const { fullName, email, password, mobile } = req.body;
+app.post('/signup', signupPost)
 
-  if (!fullName || !email || !password || !mobile) {
-    const emptyFields = [];
-    if (!fullName) emptyFields.push('fullName');
-    if (!email) emptyFields.push('email');
-    if (!password) emptyFields.push('password');
-    if (!mobile) emptyFields.push('mobile');
-
-    return res.json({
-      status: false,
-      message: `Please provide ${emptyFields.join(', ')}`
-    })
-  }
-
-  User.findOne({ email: email }, (err, user) => {
-    if (user) {
-      res.send({
-        success: false,
-        message: "user already exist"
-      })
-    }
-    else {
-      const newUser = new User({
-        fullName,
-        email,
-        password: md5(password),
-        mobile
-      })
-      const savedUser = newUser.save();
-      res.send({
-        success: true,
-        data: savedUser,
-        message: "user created successfully"
-      })
-    }
-  })
-
-})
-
-app.post('/login', async (req, res) => {
-  const { email, password } = req.body
-
-  if (!email) {
-    return res.send({
-      success: false,
-      message: "email cannot be empty",
-    });
-  }
-
-  if (!password) {
-    return res.send({
-      success: false,
-      message: "password cannot be empty",
-    });
-  }
-
-  const user = await User.findOne({
-    email,
-    password: md5(password)
-  })
-
-  if (user) {
-    res.send({
-      success: true,
-      data: user,
-      message: "User logged in successfully",
-    })
-  }
-  else {
-    res.send({
-      success: false,
-      data: "Wrong Credentials! Please try again."
-    })
-  }
-})
+app.post('/login', loginPost)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
