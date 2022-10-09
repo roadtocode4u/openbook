@@ -35,24 +35,74 @@ app.get('/health', (req, res) => {
 })
 
 app.post('/signup', async (req, res) => {
-  const { fullName, email, password, mobile } = req.body
+  const { fullName, email, password, mobile } = req.body;
 
-  const newUser = new User({
-    fullName,
-    email,
-    password: md5(password),
-    mobile
+  if (!fullName) {
+    return res.send({
+      success: false,
+      message: "fullName cannot be empty",
+    });
+  }
+
+  if (!email) {
+    return res.send({
+      success: false,
+      message: "email cannot be empty",
+    });
+  }
+
+  if (!password) {
+    return res.send({
+      success: false,
+      message: "password cannot be empty",
+    });
+  }
+
+  if (!mobile) {
+    return res.send({
+      success: false,
+      message: "mobile cannot be empty",
+    });
+  }
+
+  User.findOne({ email: email }, (err, user) => {
+    if (user) {
+      res.send({ message: "user already exist" })
+    }
+    else {
+      const newUser = new User({
+        fullName,
+        email,
+        password: md5(password),
+        mobile
+      })
+      const savedUser = newUser.save();
+      res.send({
+        success: true,
+        data: savedUser,
+        message: "user created successfully"
+      })
+    }
   })
-  const savedUser = await newUser.save();
-  res.send({
-    success: true,
-    data: savedUser,
-    message: "user created successfully"
-  })
+
 })
 
 app.post('/login', async (req, res) => {
   const { email, password } = req.body
+
+  if (!email) {
+    return res.send({
+      success: false,
+      message: "email cannot be empty",
+    });
+  }
+
+  if (!password) {
+    return res.send({
+      success: false,
+      message: "password cannot be empty",
+    });
+  }
 
   const user = await User.findOne({
     email,
