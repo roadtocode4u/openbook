@@ -1,0 +1,35 @@
+.header-display-image {
+    max-height: 250px !important;
+    min-height: 300px !important;
+}
+
+p {
+    font-size: 20px;
+}
+
+.btn-1 {
+    margin-right: 20px;
+}
+
+.btn-2 {
+    margin-left: 40px;
+}
+
+.main-div {
+    margin-top: 100px;
+}
+
+.lbc1-image{
+    max-height: 160px !important;
+    min-height: 210px !important;
+}
+
+.lbc2-image{
+    max-height: 150px !important;
+    min-height: 200px !important;
+}
+
+.lbc-image{
+    max-height: 130px !important;
+    min-height: 200px !important;
+}
