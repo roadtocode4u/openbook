@@ -37,37 +37,25 @@ app.get('/health', (req, res) => {
 app.post('/signup', async (req, res) => {
   const { fullName, email, password, mobile } = req.body;
 
-  if (!fullName) {
-    return res.send({
-      success: false,
-      message: "fullName cannot be empty",
-    });
-  }
+  if (!fullName || !email || !password || !mobile) {
+    const emptyFields = [];
+    if (!fullName) emptyFields.push('fullName');
+    if (!email) emptyFields.push('email');
+    if (!password) emptyFields.push('password');
+    if (!mobile) emptyFields.push('mobile');
 
-  if (!email) {
-    return res.send({
-      success: false,
-      message: "email cannot be empty",
-    });
-  }
-
-  if (!password) {
-    return res.send({
-      success: false,
-      message: "password cannot be empty",
-    });
-  }
-
-  if (!mobile) {
-    return res.send({
-      success: false,
-      message: "mobile cannot be empty",
-    });
+    return res.json({
+      status: false,
+      message: `Please provide ${emptyFields.join(', ')}`
+    })
   }
 
   User.findOne({ email: email }, (err, user) => {
     if (user) {
-      res.send({ message: "user already exist" })
+      res.send({
+        success: false,
+        message: "user already exist"
+      })
     }
     else {
       const newUser = new User({
