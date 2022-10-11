@@ -1,5 +1,27 @@
-.nav-color{
+.nav-color {
     color: black;
 }
 
+.navbar-toggler {
+    color: black;
+}
 
+.signup-btn {
+    padding: 5px;
+    margin: 3px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: #e0e0e0;
+    box-shadow: 0px 3px 1px -2px rgb(0, 0, 0);
+}
+
+.login-btn {
+    padding: 5px;
+    margin: 3px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: #efad19;
+    box-shadow: 0px 3px 1px -2px rgb(0, 0, 0);
+}

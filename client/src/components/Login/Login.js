@@ -3,8 +3,11 @@ import './Login.css';
 import axios from 'axios';
 import swal from "sweetalert";
 import headerImage from './img/header-login-img.png';
+import {useNavigate} from 'react-router-dom'
 
 function Login() {
+
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,16 +19,18 @@ function Login() {
     })
 
     if (response.data.success) {
+      localStorage.setItem('openBookUser', JSON.stringify(response.data.data));
       swal("Login Successfully !!");
+      navigate('/')
+      
     }
     else {
-      swal(response.data.message)
+      swal("Invalid Credentials")
     }
 
       setEmail("");
       setPassword("")
   }
-
 
   return (
     <>

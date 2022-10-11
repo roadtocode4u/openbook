@@ -3,8 +3,11 @@ import './Signup.css';
 import axios from 'axios';
 import swal from "sweetalert";
 import headerImage from "./img/signup-girl.png";
+import {useNavigate} from 'react-router-dom';
 
 function Signup() {
+
+  const navigate = useNavigate();
 
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,6 +25,7 @@ function Signup() {
     if(response.data.success)
     {
       swal("Signup Successfully !!");
+      navigate('/login');
     }
     else{
       swal(response.data.message)
