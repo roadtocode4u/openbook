@@ -1,4 +1,1 @@
-export default function getUser() {
-    const openBookUser = localStorage.getItem('openBookUser')
-    return openBookUser
-}
+export const getUser = () => localStorage.getItem('openBookUser')

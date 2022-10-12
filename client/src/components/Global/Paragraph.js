@@ -1,0 +1,1 @@
+export const Paragraph = ({ classname, text }) => <p className={ classname }>{ text }</p>

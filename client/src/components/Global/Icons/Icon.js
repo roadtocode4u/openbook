@@ -1,0 +1,1 @@
+export const Icon = ({ iconName }) => <i class={ "fa-solid fa-" + iconName }></i>
