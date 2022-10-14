@@ -5,7 +5,8 @@ import mongoose from 'mongoose';
 
 import { health } from './controllers/health.js';
 import { signupPost } from './controllers/signup.js';
-import { loginPost } from './controllers/login.js'
+import { loginPost } from './controllers/login.js';
+import { coursePost } from './controllers/course.js';
 
 dotennv.config();
 const app = express();
@@ -34,6 +35,8 @@ app.get('/health', health)
 app.post('/signup', signupPost)
 
 app.post('/login', loginPost)
+
+app.post('/course', coursePost)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
