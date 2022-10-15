@@ -1,11 +1,11 @@
 import Course from '../models/Course.js';
 
 export const coursePost = async (req, res) => {
-    const { title, code, branch, credits, thumbnail} = req.body
+    const { title, courseCode, branch, credits, thumbnail} = req.body
 
     const newCourse =  new Course({
         title,
-        code,
+        courseCode,
         branch,
         credits,
         thumbnail
