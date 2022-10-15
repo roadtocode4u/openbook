@@ -8,6 +8,7 @@ function Course() {
   const [searchParams] = useSearchParams();
   const courseCode = searchParams.get("courseCode");
 
+  {/* TODO: @pinki change this variable to useState variable and this data should come from getcourse api call */}
   const studyMaterials = [
     {
       "title": "Study Material 1",
@@ -43,13 +44,14 @@ function Course() {
 
   return (
     <div>
+      {/* TODO: @pinki complete this card */}
       <div className='course-header'>
         <h1>{courseCode}</h1>
       </div>
       <div className='course-material-container'>
         <div className='row'>
           {
-            studyMaterials.map((material, index) => {
+            studyMaterials?.map((material, index) => {
               return (
                 <div className='col-md-4 col-lg-3 d-flex justify-content-center' key={index}>
                   <StudyMaterialCard material={material} />
