@@ -7,6 +7,7 @@ import { health } from './controllers/health.js';
 import { signupPost } from './controllers/signup.js';
 import { loginPost } from './controllers/login.js';
 import { coursePost } from './controllers/course.js';
+import { studyMaterialPost } from './controllers/studymaterial.js';
 
 dotennv.config();
 const app = express();
@@ -37,6 +38,8 @@ app.post('/signup', signupPost)
 app.post('/login', loginPost)
 
 app.post('/course', coursePost)
+
+app.post('/studymaterial', studyMaterialPost)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
