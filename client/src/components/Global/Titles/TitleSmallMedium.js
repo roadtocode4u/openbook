@@ -1,0 +1,1 @@
+export const TitleSmallMedium = ({ classname, text }) => <h4 className={classname}> { text } </h4>
