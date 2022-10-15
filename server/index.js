@@ -41,6 +41,8 @@ app.post('/course', coursePost)
 
 app.post('/studymaterial', studyMaterialPost)
 
+// TODO: @pinki implement GET coursematerial api
+
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
 });
