@@ -8,6 +8,7 @@ import { signupPost } from './controllers/signup.js';
 import { loginPost } from './controllers/login.js';
 import { coursePost } from './controllers/course.js';
 import { studyMaterialPost } from './controllers/studymaterial.js';
+import { studyMaterialGet } from './controllers/studymaterial.js'
 
 dotennv.config();
 const app = express();
@@ -42,6 +43,8 @@ app.post('/course', coursePost)
 app.post('/studymaterial', studyMaterialPost)
 
 // TODO: @pinki implement GET coursematerial api
+
+app.get('/studymaterial', studyMaterialGet)
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);
