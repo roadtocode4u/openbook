@@ -27,7 +27,11 @@ export const studyMaterialPost = async (req, res) => {
 }
 
 export const studyMaterialGet = async (req, res) => {
-    const studymaterial = await StudyMatrial.find();
+    const { courseCode } = req.query;
+    
+    const studymaterial = await StudyMatrial.findOne({
+        courseCode: courseCode
+    });
     res.send({
         success: true,
         data: studymaterial
