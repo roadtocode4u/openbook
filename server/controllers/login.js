@@ -11,7 +11,7 @@ export const loginPost = async (req, res) => {
     if (!password) errorMessages.push("password cannot be empty")
 
     if (errorMessages.length) {
-        return res.send({
+        return res.json({
             success: false,
             message: errorMessages.toString()
         });
@@ -22,7 +22,7 @@ export const loginPost = async (req, res) => {
         password: md5(password)
     })
 
-    res.send({
+    res.json({
         success: user ? true : false,
         message: user ? "Login Successfully!" : "Wrong Credentials!",
         data: user

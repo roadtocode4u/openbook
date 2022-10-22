@@ -32,7 +32,7 @@ export const studyMaterialGet = async (req, res) => {
     const studymaterial = await StudyMatrial.findOne({
         courseCode: courseCode
     });
-    res.send({
+    res.json({
         success: true,
         data: studymaterial
     })

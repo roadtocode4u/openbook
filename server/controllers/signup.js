@@ -20,7 +20,7 @@ export const signupPost = async (req, res) => {
 
     const user = await User.findOne({ email: email })
     if (user) {
-        return res.send({
+        return res.json({
             success: false,
             message: "user already exist"
         })
@@ -32,7 +32,7 @@ export const signupPost = async (req, res) => {
         mobile
     })
     const savedUser = await newUser.save();
-    res.send({
+    res.json({
         success: true,
         data: savedUser,
         message: "user created successfully"
