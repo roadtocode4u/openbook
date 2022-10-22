@@ -5,17 +5,15 @@ import User from '../models/User.js';
 export const loginPost = async (req, res) => {
     const { email, password } = req.body
 
-    if (!email) {
-        return res.send({
-            success: false,
-            message: "email cannot be empty",
-        });
-    }
+    let errorMessages = []
 
-    if (!password) {
+    if (!email) errorMessages.push("email cannot be empty")
+    if (!password) errorMessages.push("password cannot be empty")
+
+    if (errorMessages.length) {
         return res.send({
             success: false,
-            message: "password cannot be empty",
+            message: errorMessages.toString()
         });
     }
 
@@ -24,17 +22,9 @@ export const loginPost = async (req, res) => {
         password: md5(password)
     })
 
-    if (user) {
-        res.send({
-            success: true,
-            data: user,
-            message: "User logged in successfully",
-        })
-    }
-    else {
-        res.send({
-            success: false,
-            data: "Wrong Credentials! Please try again."
-        })
-    }
+    res.send({
+        success: user ? true : false,
+        message: user ? "Login Successfully!" : "Wrong Credentials!",
+        data: user
+    })
 }
