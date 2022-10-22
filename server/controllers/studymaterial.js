@@ -5,7 +5,7 @@ export const studyMaterialPost = async (req, res) => {
     const { title, description, url, contenttype, courseCode } = req.body;
 
     const course = await Course.findOne({ courseCode });
-    if(!course) {
+    if (!course) {
         return res.json({ status: false, data: {}, message: 'Course not found' });
     }
 
@@ -24,4 +24,16 @@ export const studyMaterialPost = async (req, res) => {
         message: "Study Material Added Successfully",
     });
 
+}
+
+export const studyMaterialGet = async (req, res) => {
+    const { courseCode } = req.query;
+    
+    const studymaterial = await StudyMatrial.findOne({
+        courseCode: courseCode
+    });
+    res.send({
+        success: true,
+        data: studymaterial
+    })
 }

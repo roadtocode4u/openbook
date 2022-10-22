@@ -32,13 +32,6 @@ function Home() {
         </div>
       </div>
 
-      {/* <div className='text-center main-div'>
-        <h3>How it Works</h3>
-        <p>This is the website we wish we had when we were learning on our own.
-          We scour the internet looking for only the best resources to supplement
-          your learning and present them in a logical order.</p>
-      </div> */}
-
       <div className='container text-center main-div'>
         <div className='row'>
           <div className='col-md-3'></div>

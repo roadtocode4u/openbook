@@ -18,27 +18,23 @@ export const signupPost = async (req, res) => {
         })
     }
 
-    User.findOne({ email: email }, (err, user) => {
-        if (user) {
-            res.send({
-                success: false,
-                message: "user already exist"
-            })
-        }
-        else {
-            const newUser = new User({
-                fullName,
-                email,
-                password: md5(password),
-                mobile
-            })
-            const savedUser = newUser.save();
-            res.send({
-                success: true,
-                data: savedUser,
-                message: "user created successfully"
-            })
-        }
+    const user = await User.findOne({ email: email })
+    if (user) {
+        return res.send({
+            success: false,
+            message: "user already exist"
+        })
+    }
+    const newUser = new User({
+        fullName,
+        email,
+        password: md5(password),
+        mobile
     })
-
+    const savedUser = await newUser.save();
+    res.send({
+        success: true,
+        data: savedUser,
+        message: "user created successfully"
+    })
 }
