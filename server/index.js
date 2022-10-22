@@ -42,8 +42,6 @@ app.post('/course', coursePost)
 
 app.post('/studymaterial', studyMaterialPost)
 
-// TODO: @pinki implement GET coursematerial api
-
 app.get('/studymaterial', studyMaterialGet)
 
 app.listen(PORT, () => {

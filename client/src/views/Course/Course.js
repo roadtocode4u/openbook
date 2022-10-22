@@ -8,14 +8,13 @@ function Course() {
   const [searchParams] = useSearchParams();
   const courseCode = searchParams.get("courseCode");
 
-  {/* TODO: @pinki change this variable to useState variable and this data should come from getcourse api call */ }
-  const [studematerial, setStudeMaterial] = useState([]);
+  const [studymaterial, setStudyMaterial] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get('/studymaterial');
+      const response = await axios.get(`/studymaterial?courseCode=${courseCode}`);
       if (response) {
-        setStudeMaterial(response.data.data)
+        setStudyMaterial(response.data.data)
       }
     }
     fetchData();
@@ -31,7 +30,7 @@ function Course() {
       <div className='course-material-container'>
         <div className='row'>
           {
-            studematerial?.map((material, index) => {
+            studymaterial?.map((material, index) => {
               return (
                 <div className='col-md-4 col-lg-3 d-flex justify-content-center' key={index}>
                   <StudyMaterialCard
