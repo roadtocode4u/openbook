@@ -18,3 +18,15 @@ export const coursePost = async (req, res) => {
         message: "New Course is added successfully",
     });
 }
+
+export const courseGet = async (req, res) => {
+    const { courseCode } = req.query;
+    
+    const course = await Course.findOne({
+        courseCode: courseCode
+    });
+    res.json({
+        success: true,
+        data: course
+    })
+}

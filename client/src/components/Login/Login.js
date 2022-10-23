@@ -36,7 +36,7 @@ function Login() {
     <>
       <div className='container card mt-5'>
         <div className='row'>
-          <h2 className='text-center mt-5'>Login Form </h2>
+          <h2 className='text-center mt-5'>Login</h2>
           <div className='col-md-6 mt-3 d-flex flex-column justify-content-evenly'>
             <form>
               <div className="mb-3">

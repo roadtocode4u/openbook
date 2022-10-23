@@ -7,8 +7,9 @@ import { health } from './controllers/health.js';
 import { signupPost } from './controllers/signup.js';
 import { loginPost } from './controllers/login.js';
 import { coursePost } from './controllers/course.js';
+import {courseGet} from './controllers/course.js';
 import { studyMaterialPost } from './controllers/studymaterial.js';
-import { studyMaterialGet } from './controllers/studymaterial.js'
+import { studyMaterialGet } from './controllers/studymaterial.js';
 
 dotennv.config();
 const app = express();
@@ -39,6 +40,8 @@ app.post('/signup', signupPost)
 app.post('/login', loginPost)
 
 app.post('/course', coursePost)
+
+app.get('/course', courseGet)
 
 app.post('/studymaterial', studyMaterialPost)
 

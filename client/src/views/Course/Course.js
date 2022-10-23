@@ -10,24 +10,40 @@ function Course() {
 
   const [studymaterial, setStudyMaterial] = useState([]);
 
+  const [course, setCourse] = useState({});
+
   useEffect(() => {
-    async function fetchData() {
+    async function fetchStudyMaterialData() {
       const response = await axios.get(`/studymaterial?courseCode=${courseCode}`);
       if (response) {
         setStudyMaterial(response.data.data)
       }
     }
-    fetchData();
+    fetchStudyMaterialData();
+
+    async function fetchCourseData() {
+      const response = await axios.get(`/course?courseCode=${courseCode}`);
+      if (response) {
+        setCourse(response.data.data)
+      }
+    }
+    fetchCourseData();
   }, []);
 
   return (
     <div>
-      {/* TODO: @pinki complete this card */}
-      <div className='course-header'>
-        <h1>{courseCode}</h1>
+      <div className='container'>
+        <div className='row course-header'>
+          <div className='col-md-4 '><img className='image-logo' src={course.thumbnail} /></div>
+          <div className='col-md-8 text-center'>
+            <h3>{course.title}</h3>
+            <h4>{courseCode}</h4>
+            <h4><i class="fa-solid fa-credit-card"></i> {course.credits}</h4>
+          </div>
+        </div>
       </div>
 
-      <div className='course-material-container'>
+      <div className='course-material-container mt-4'>
         <div className='row'>
           {
             studymaterial?.map((material, index) => {
