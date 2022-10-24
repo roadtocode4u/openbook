@@ -42,7 +42,7 @@ function Signup() {
       <div className='container mt-5'>
         <div className=' card-signup'>
         <div className='row'>
-          <h2 className='text-center mt-5'>Open-Book📖</h2>
+          <h2 className='text-center mt-3'>Open-Book📖</h2>
           <h4 className="text-center mt-2 ">
             ✏️ Learn Faster, Study Better !!
           </h4>
