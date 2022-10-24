@@ -1,8 +1,27 @@
-.card {
+.card-signup{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     box-shadow: 5px 5px 10px 2px gray;
 }
 
-.header-display-img {
-    max-height: 200px;
-    min-height: 250px;
+.signup-image{
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.signup-page-btn{
+    padding: 5px;
+    margin: 3px;
+    width: 120px;
+    border-radius: 30px;
+    border: none;
+    background-color: #efad19;
+    box-shadow: 0px 3px 1px -2px rgb(0, 0, 0);
 }

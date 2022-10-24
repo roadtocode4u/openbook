@@ -39,7 +39,8 @@ function Signup() {
 
   return (
     <>
-      <div className='container card mt-5'>
+      <div className='container mt-5'>
+        <div className=' card-signup'>
         <div className='row'>
           <h2 className='text-center mt-5'>Open-Book📖</h2>
           <h4 className="text-center mt-2 ">
@@ -50,11 +51,11 @@ function Signup() {
               <img
                 src={headerImage}
                 alt=""
-                className="img-fluid mx-auto d-block header-display-img"
+                className="signup-image mx-auto d-block"
               />
             </div>
           </div>
-          <div className='col-md-6 mt-3 d-flex flex-column justify-content-evenly'>
+          <div className='col-md-6 mt-3 '>
             <form>
 
               <div className="mb-3 mt-5">
@@ -93,12 +94,13 @@ function Signup() {
                   value={mobile} onChange={(e) => { setMobile(e.target.value) }}
                 />
               </div>
-              <button className="btn btn-warning w-100 mb-5" type="button" onClick={addUser}>
+              <button className="signup-page-btn w-100 mb-5" type="button" onClick={addUser}>
                 <i class="fa-solid fa-right-to-bracket"></i> Signup
               </button>
             </form>
           </div>
         </div>
+      </div>
       </div>
     </>
   )
