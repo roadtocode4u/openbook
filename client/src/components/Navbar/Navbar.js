@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import './Navbar.css';
+import logo from './favicon.png'
 export default function Navbar() {
     return (
         <>
@@ -8,7 +9,7 @@ export default function Navbar() {
                 <nav className="navbar navbar-expand-lg sticky-top navbar-light navbar-openbook sticky-top shadow-sm">
                     <div className="container-fluid">
                         <Link className="navbar-brand " to="#">
-                            <h3><b className='nav-color'>Open-Book📖</b></h3>
+                            <h3><b className='nav-color'> <img src={logo}/> Open-Book</b></h3>
                         </Link>
                         <button
                             className="navbar-toggler nav-color"
@@ -29,13 +30,13 @@ export default function Navbar() {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="">
-                                        <h5><b className='nav-color'>Add Courses</b></h5>
+                                    <Link className="nav-link" to="/studymaterial/add">
+                                        <h5><b className='nav-color'>AddStudyMaterial</b></h5>
                                     </Link>
                                 </li>
 
                                 <li className="nav-item">
-                                    <Link className="nav-link" to=" ">
+                                    <Link className="nav-link" to="">
                                         <h5><b className='nav-color'>Notes</b></h5>
                                     </Link>
                                 </li>

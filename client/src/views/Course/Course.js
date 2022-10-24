@@ -50,9 +50,9 @@ function Course() {
               return (
                 <div className='col-md-4 col-lg-3 d-flex justify-content-center' key={index}>
                   <StudyMaterialCard
-                    contenttype={material.contenttype}
                     title={material.title}
-                    description={material.description} />
+                    description={material.description}
+                    contenttype={material.contenttype} />
                 </div>)
             })
           }
