@@ -17,7 +17,7 @@ function StudyMaterialCard(props) {
     <div className='study-material-card'>
       <h6 className="study-material-card-title text-center">{props.title}</h6>
       <p className='study-material-card-description text-center'>{props.description}</p>
-      <img src={ContentTypeImageMap[props.contenttype]}
+      <img src={ContentTypeImageMap[props.contentType]}
         className="study-material-card-header-img" />
       <img src={IcoCardOpen}
         className="study-material-card-open-ico " />

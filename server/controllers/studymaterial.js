@@ -2,7 +2,7 @@ import StudyMatrial from '../models/StudyMaterial.js';
 import Course from '../models/Course.js';
 
 export const studyMaterialPost = async (req, res) => {
-    const { title, description, url, contenttype, courseCode } = req.body;
+    const { title, description, url, contentType, courseCode } = req.body;
 
     const course = await Course.findOne({ courseCode });
     if (!course) {
@@ -13,7 +13,7 @@ export const studyMaterialPost = async (req, res) => {
         title,
         description,
         url,
-        contenttype,
+        contentType,
         course: course._id
     });
 

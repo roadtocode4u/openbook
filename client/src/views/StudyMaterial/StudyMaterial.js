@@ -14,15 +14,15 @@ function StudyMaterial() {
   const [description, setDescription] = useState("")
   const [url, setUrl] = useState("")
   const [courseCode, setCourseCode] = useState("")
-  // const [contentType, setContentType] = useState("")
+  const [contentType, setContentType] = useState("")
 
   async function addStudyMaterial() {
     const response = await axios.post("/studymaterial", {
       title: title,
       description: description,
       url: url,
-      courseCode: courseCode
-      // contentType: contentType
+      courseCode: courseCode,
+      contentType: contentType
     })
 
     if (response) {
@@ -94,7 +94,7 @@ function StudyMaterial() {
                       onChange={(e) => setCourseCode(e.target.value)}
                     />
                   </div>
-                  {/* <div className="mb-3">
+                  <div className="mb-3">
                     <select className="form-select" aria-label="Select Content Type"
                     value={contentType} onChange={(e) => setContentType(e.target.value)}>
                       <option> Select Content Type </option>
@@ -102,7 +102,7 @@ function StudyMaterial() {
                       <option value="link">Link</option>
                       <option value="video">Video</option>
                     </select>
-                  </div> */}
+                  </div>
                   <button className="button-add-material w-100 mb-3" type="button" onClick={addStudyMaterial}>
                     <i class="fa-solid fa-right-to-bracket"></i> Study Material
                   </button>

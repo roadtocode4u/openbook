@@ -52,7 +52,7 @@ function Course() {
                   <StudyMaterialCard
                     title={material.title}
                     description={material.description}
-                    contenttype={material.contenttype} />
+                    contentType={material.contentType} />
                 </div>)
             })
           }
