@@ -13,6 +13,10 @@ function StudyMaterial() {
   const [courseCode, setCourseCode] = useState("");
 
   async function addStudyMaterial() {
+    if(!title || !description || !url || !contentType || !courseCode){
+      swal("please fill all the fields");
+      return;
+    }
     const response = await axios.post('/studymaterial', {
       title: title,
       description: description,
@@ -107,3 +111,4 @@ function StudyMaterial() {
 }
 
 export default StudyMaterial
+
