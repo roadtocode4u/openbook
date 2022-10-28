@@ -11,17 +11,17 @@ export default function Footer() {
                         <div class="col-sm-12 col-md-3">
                             <p class="text-justify">
                                 <h4>Open-Book 📖</h4>
-                                High quality coding education created by an Open-Source community.
+                                High quality coding education created by an Open-Book community.
                             </p>
                         </div>
 
                         <div class="col-xs-6 col-md-3">
                             <h6>Quick Links</h6>
                             <ul class="footer-links">
-                                <li>Home</li>
-                                <li>Notes</li>
-                                <li>Signup</li>
-                                <li>Login</li>
+                                <a href="/">Home</a>
+                                <a href="/studymaterial/add">Add Study Material</a>
+                                <a href="/signup">Signup</a>
+                                <a href="/login">Login</a>
                             </ul>
                         </div>
 
