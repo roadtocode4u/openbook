@@ -24,8 +24,23 @@ function Home() {
               <h3 >✏️Learn Faster, Study Better !</h3>
               <h4> Get access to notes anytime, anywhere. </h4>
               <div className='mt-4'>
-                <button type="button" className="btn btn-warning btn-1"><i class="fa-solid fa-magnifying-glass"></i> Access Notes</button>
-                <button type="button" className="btn btn-dark btn-2">Call us <i class="fa-solid fa-headset"></i></button>
+                <select className='select-branch'>
+                  <option>Select Branch</option>
+                  <option value="comp-sci">Computer Science</option>
+                  <option value="comp-tech">Computer Techonology</option>
+                  <option value="comp-eng">Computer Engineering</option>
+                </select>
+                <select className='select-sem'>
+                  <option>Select Semester</option>
+                  <option value="first">1st</option>
+                  <option value="second">2nd</option>
+                  <option value="third">3rd</option>
+                  <option value="fourth">4th</option>
+                  <option value="fifth">5th</option>
+                  <option value="sixth">6th</option>
+                  <option value="senventh">7th</option>
+                  <option value="eighth">8th</option>
+                </select>
               </div>
             </div>
           </div>
