@@ -1,4 +1,4 @@
-export default function getUser() {
+export const isAdmin = () => {
     const openBookUser = JSON.parse(localStorage.getItem('openBookUser'))
-    return openBookUser
+    return openBookUser?.role === "admin"
 }

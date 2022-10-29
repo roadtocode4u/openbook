@@ -3,6 +3,7 @@ import './StudyMaterial.css'
 import StudyMaterialHeaderImg from './img/study-material-header-img.png'
 import axios from 'axios';
 import swal from "sweetalert";
+import { isAdmin } from '../../utils/util';
 
 function StudyMaterial() {
 
@@ -11,6 +12,15 @@ function StudyMaterial() {
   const [url, setUrl] = useState("");
   const [contentType, setContentType] = useState("");
   const [courseCode, setCourseCode] = useState("");
+
+  if(!isAdmin()){
+    swal("Only admin user is allowed to add Study Material!")
+    .then(() => {
+      window.location = "/"
+    });
+   
+  }
+  console.log(isAdmin());
 
   async function addStudyMaterial() {
     if(!title || !description || !url || !contentType || !courseCode){
