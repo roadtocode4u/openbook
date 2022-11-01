@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import headerImage from './img/heading-image.png';
 import learnImage from './img/learn-img.png';
 import buildImage from './img/build-img.png';
@@ -6,6 +6,15 @@ import connectImage from './img/connect-img.png';
 import './Home.css';
 
 function Home() {
+
+  const [branch, setBranch] = useState(localStorage.getItem("branch") || '');
+  const [sem, setSem] = useState(localStorage.getItem("sem") || '');
+
+  useEffect(() => {
+    if (branch) localStorage.setItem("branch", branch);
+    if (sem) localStorage.setItem("sem", sem);
+  }, [branch, sem])
+  
   return (
     <>
       <div className='container'>
@@ -24,13 +33,13 @@ function Home() {
               <h3 >✏️Learn Faster, Study Better !</h3>
               <h4> Get access to notes anytime, anywhere. </h4>
               <div className='mt-4'>
-                <select className='select-branch'>
+                <select className='select-branch' defaultValue={branch} onChange={(e) => { setBranch(e.target.value) }}>
                   <option>Select Branch</option>
                   <option value="comp-sci">Computer Science</option>
                   <option value="comp-tech">Computer Techonology</option>
                   <option value="comp-eng">Computer Engineering</option>
                 </select>
-                <select className='select-sem'>
+                <select className='select-sem' defaultValue={sem} onChange={(e) => { setSem(e.target.value) }}>
                   <option>Select Semester</option>
                   <option value="first">1st</option>
                   <option value="second">2nd</option>
@@ -51,9 +60,9 @@ function Home() {
         <div className='row'>
           <div className='col-md-3'></div>
           <div className='col-md-6'><h3>How it Works</h3>
-        <p>This is the website we wish we had when we were learning on our own.
-          We scour the internet looking for only the best resources to supplement
-          your learning and present them in a logical order.</p></div>
+            <p>This is the website we wish we had when we were learning on our own.
+              We scour the internet looking for only the best resources to supplement
+              your learning and present them in a logical order.</p></div>
           <div className='col-md-3'>
           </div>
         </div>
