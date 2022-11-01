@@ -35,9 +35,13 @@ function Home() {
               <div className='mt-4'>
                 <select className='select-branch' defaultValue={branch} onChange={(e) => { setBranch(e.target.value) }}>
                   <option>Select Branch</option>
-                  <option value="comp-sci">Computer Science</option>
-                  <option value="comp-tech">Computer Techonology</option>
-                  <option value="comp-eng">Computer Engineering</option>
+                  <option value="computer-science">Computer Science & Engineering</option>
+                  <option value="mechanical-engineering">Mechanical Engineering</option>
+                  <option value="production-engineering">Production Engineering</option>
+                  <option value="civil-engineering">Civil Engineering</option>
+                  <option value="electronic-communication-engineering">Electronic & Communication Engineering</option>
+                  <option value="chemical-engineering">Chemical Engineering</option>
+                  <option value="electric-engineering">Eelectric Engineering</option>
                 </select>
                 <select className='select-sem' defaultValue={sem} onChange={(e) => { setSem(e.target.value) }}>
                   <option>Select Semester</option>
