@@ -7,7 +7,8 @@ import { health } from './controllers/health.js';
 import { signupPost } from './controllers/signup.js';
 import { loginPost } from './controllers/login.js';
 import { coursePost } from './controllers/course.js';
-import {courseGet} from './controllers/course.js';
+import { courseGet } from './controllers/course.js';
+import { searchCoursesGet } from './controllers/course.js'
 import { studyMaterialPost } from './controllers/studymaterial.js';
 import { studyMaterialGet } from './controllers/studymaterial.js';
 
@@ -42,6 +43,8 @@ app.post('/login', loginPost)
 app.post('/course', coursePost)
 
 app.get('/course', courseGet)
+
+app.get('/search_courses', searchCoursesGet)
 
 app.post('/studymaterial', studyMaterialPost)
 

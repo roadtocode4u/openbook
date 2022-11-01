@@ -1,12 +1,13 @@
 import Course from '../models/Course.js';
 
 export const coursePost = async (req, res) => {
-    const { title, courseCode, branch, credits, thumbnail } = req.body
+    const { title, courseCode, branch, sem, credits, thumbnail } = req.body
 
     const newCourse = new Course({
         title,
         courseCode,
         branch,
+        sem,
         credits,
         thumbnail
     })
@@ -21,7 +22,7 @@ export const coursePost = async (req, res) => {
 
 export const courseGet = async (req, res) => {
     const { courseCode } = req.query;
-    
+
     const course = await Course.findOne({
         courseCode: courseCode
     });
@@ -30,3 +31,18 @@ export const courseGet = async (req, res) => {
         data: course
     })
 }
+
+export const searchCoursesGet = async (req, res) => {
+    const { branch, sem } = req.query;
+
+    const courses = await Course.find({
+        branch,
+        sem
+    });
+    res.json({
+        success: true,
+        data: courses
+    })
+}
+
+

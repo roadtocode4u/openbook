@@ -14,7 +14,7 @@ function Home() {
     if (branch) localStorage.setItem("branch", branch);
     if (sem) localStorage.setItem("sem", sem);
   }, [branch, sem])
-  
+
   return (
     <>
       <div className='container'>
@@ -41,14 +41,14 @@ function Home() {
                 </select>
                 <select className='select-sem' defaultValue={sem} onChange={(e) => { setSem(e.target.value) }}>
                   <option>Select Semester</option>
-                  <option value="first">1st</option>
-                  <option value="second">2nd</option>
-                  <option value="third">3rd</option>
-                  <option value="fourth">4th</option>
-                  <option value="fifth">5th</option>
-                  <option value="sixth">6th</option>
-                  <option value="senventh">7th</option>
-                  <option value="eighth">8th</option>
+                  <option value="1">1st</option>
+                  <option value="2">2nd</option>
+                  <option value="3">3rd</option>
+                  <option value="4">4th</option>
+                  <option value="5">5th</option>
+                  <option value="6">6th</option>
+                  <option value="7">7th</option>
+                  <option value="8">8th</option>
                 </select>
               </div>
             </div>
