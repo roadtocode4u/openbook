@@ -113,7 +113,7 @@ function Home() {
       <div className='container mt-5'>
         <div className='row logo-div'>
           <div className='col-md-5 mt-4 mb-3 shadow'>
-            <div className='createor-div '>
+            <div className='createor-div'>
               This Project created by an Open-Book community.🎯
             </div>
           </div>
