@@ -57,6 +57,11 @@ p {
     margin-top: 15px;
 }
 
+.logo-img:hover{
+    box-shadow: 5px 5px 10px 2px gray;
+    transition: 0.5s;
+}
+
 .socialmedia-logo {
     border-radius: 50px;
     margin-left: 30px;
@@ -71,3 +76,4 @@ p {
     margin-right: auto;
     box-shadow: 5px 5px 10px 2px gray;
 }
+

@@ -58,7 +58,7 @@ function Signup() {
           <div className='col-md-6 mt-3 '>
             <form>
 
-              <div className="mb-3 mt-5">
+              <div className="mb-3 mt-5" >
                 <input
                   type="text"
                   className="form-control"
