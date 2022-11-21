@@ -8,17 +8,23 @@ import Github from './img/github-logo.png';
 import Linkdin from './img/linkdin-logo.png'
 import Twitter from './img/twitter-logo.png';
 import YouTube from './img/you-tube-logo.png';
-import Instagram from './img/instagram-logo.png'
+import Instagram from './img/instagram-logo.png';
 import './Home.css';
-
+import  subjectMaps  from '../../utils/subjectMaps.json';
 function Home() {
 
   const [branch, setBranch] = useState(localStorage.getItem("branch") || '');
   const [sem, setSem] = useState(localStorage.getItem("sem") || '');
 
+  const [subjects, setSubjects] = useState([])
+
   useEffect(() => {
     if (branch) localStorage.setItem("branch", branch);
     if (sem) localStorage.setItem("sem", sem);
+
+    if (branch && sem)
+    setSubjects(subjectMaps[branch][sem]["subjects"]);
+
   }, [branch, sem])
 
   return (
@@ -41,29 +47,33 @@ function Home() {
               <div className='mt-4'>
                 <select className='select-branch' defaultValue={branch} onChange={(e) => { setBranch(e.target.value) }}>
                   <option>Select Branch</option>
-                  <option value="computer-science">Computer Science & Engineering</option>
-                  <option value="mechanical-engineering">Mechanical Engineering</option>
-                  <option value="production-engineering">Production Engineering</option>
-                  <option value="civil-engineering">Civil Engineering</option>
-                  <option value="electronic-communication-engineering">Electronic & Communication Engineering</option>
-                  <option value="chemical-engineering">Chemical Engineering</option>
-                  <option value="electric-engineering">Eelectric Engineering</option>
+                  <option value="ce-branch">Computer Engineering</option>
+                  <option value="mech-branch">Mechanical Engineering</option>
+                  <option value="entc-branch">Electronic & Communication Engineering</option>
                 </select>
                 <select className='select-sem' defaultValue={sem} onChange={(e) => { setSem(e.target.value) }}>
                   <option>Select Semester</option>
-                  <option value="1">1st</option>
-                  <option value="2">2nd</option>
-                  <option value="3">3rd</option>
-                  <option value="4">4th</option>
-                  <option value="5">5th</option>
-                  <option value="6">6th</option>
-                  <option value="7">7th</option>
-                  <option value="8">8th</option>
+                  <option value="0">1st</option>
+                  <option value="1">2nd</option>
+                  <option value="2">3rd</option>
+                  <option value="3">4th</option>
+                  <option value="4">5th</option>
+                  <option value="5">6th</option>
+                  <option value="6">7th</option>
+                  <option value="7">8th</option>
                 </select>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        {
+          subjects?.map((subject)=>{
+            return (<h1>{subject}</h1>)
+          })
+        }
       </div>
 
       <div className='container text-center main-div'>

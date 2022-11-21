@@ -77,3 +77,7 @@ p {
     box-shadow: 5px 5px 10px 2px gray;
 }
 
+.logo-div:hover{
+    box-shadow: 8px 8px 12px 2px gray;
+}
+

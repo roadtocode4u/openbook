@@ -1,0 +1,94 @@
+{
+    "ce-branch": [
+        {
+            "subjects": [
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        {
+            "subjects": [
+                "D",
+                "E",
+                "F"
+            ]
+        },
+        {
+            "subjects": [
+                "G",
+                "H",
+                "I",
+                "M",
+                "N"
+            ]
+        },
+        {
+            "subjects": [
+                "J",
+                "K",
+                "L"
+            ]
+        }
+    ],
+    "entc-branch": [
+        {
+            "subjects": [
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        {
+            "subjects": [
+                "D",
+                "E",
+                "F"
+            ]
+        },
+        {
+            "subjects": [
+                "G",
+                "H",
+                "I"
+            ]
+        },
+        {
+            "subjects": [
+                "J",
+                "K",
+                "L"
+            ]
+        }
+    ],
+    "mech-branch": [
+        {
+            "subjects": [
+                "A",
+                "B",
+                "C"
+            ]
+        },
+        {
+            "subjects": [
+                "D",
+                "E",
+                "F"
+            ]
+        },
+        {
+            "subjects": [
+                "G",
+                "H",
+                "I"
+            ]
+        },
+        {
+            "subjects": [
+                "J",
+                "K",
+                "L"
+            ]
+        }
+    ]
+}
