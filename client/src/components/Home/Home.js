@@ -73,7 +73,7 @@ function Home() {
        <div className='row'>
        {
           subjects?.map((subject)=>{
-            return <SubjectCard subject={subject}/>
+            return <SubjectCard title={subject.title} subjectCode={subject.subjectCode}/>
           })
         }
        </div>

@@ -2,34 +2,76 @@
     "ce-branch": [
         {
             "subjects": [
-                "Engineering Mathematics – I",
-                "Engineering Physics",
-                "Engineering Chemistry",
-                "Computer-Aided Engineering Drawing"
+                {"title": "Engineering Mathematics – I","subjectCode":"CSE101"},
+                {"title": "Engineering Physics","subjectCode":"CSE102"},
+                {"title": "Engineering Chemistry","subjectCode":"CSE103"},
+                {"title": "Computer-Aided Engineering Drawing","subjectCode":"CSE104"}
             ]
         },
         {
             "subjects": [
-                "Programming in C",
-                "Engineering Mathematics – II",
-                "Basic Electrical Engineering",
-                "Basic Electronics"
+                {"title": "Programming in C","subjectCode":"CSE201"},
+                {"title": "Engineering Mathematics – II","subjectCode":"CSE202"},
+                {"title": "Basic Electrical Engineering","subjectCode":"CSE203"},
+                {"title":  "Basic Electronics","subjectCode":"CSE204"}
             ]
         },
         {
             "subjects": [
-                "Discrete Mathematical Structures",
-                "Fandametals of Data Structures",
-                "Object Oriented Programming",
-                "District Mathematics",
-                "Digital electronics & Logic Design"
+                {"title":  "Discrete Mathematical Structures","subjectCode":"CSE301"},
+                {"title":  "Fandametals of Data Structures","subjectCode":"CSE302"},
+                {"title":  "Object Oriented Programming","subjectCode":"CSE303"},
+                {"title":   "District Mathematics","subjectCode":"CSE304"},
+                {"title":  "Digital electronics & Logic Design","subjectCode":"CSE5305"}    
             ]
         },
         {
             "subjects": [
-                "J",
-                "K",
-                "L"
+                "Principle Of Programming Language",
+                "Engineering Mathematics – III",
+                "Data Structure & Algorithum",
+                "Software Engineering",
+                "Microprocessor"
+            ]
+        },
+        {
+            "subjects": [
+                "Principle Of Programming Language",
+                "Engineering Mathematics – III",
+                "Data Structure & Algorithum",
+                "Software Engineering",
+                "Microprocessor"
+            ]
+        },
+        {
+            "subjects": [
+                "Database Management System",
+                "Operating System",
+                "Computer Network & Security",
+                "Theory of Computation"
+            ]
+        },
+        {
+            "subjects": [
+                "Data Science and Big Data Analytics",
+                "Web Technology",
+                "Artificial Intelligence",
+                "internship",
+                "Cloud Computing"
+            ]
+        },
+        {
+            "subjects": [
+                "Artificial Intelligence & Robitics",
+                "Data Analytics",
+                "Software Architecture & design"
+            ]
+        },
+        {
+            "subjects": [
+                "Machine Learning",
+                "Information & Cyber Security",
+                "Embedded & Real Time Operating Systems"
             ]
         }
     ],
