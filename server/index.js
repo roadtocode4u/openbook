@@ -2,6 +2,7 @@ import express from 'express';
 import dotennv from 'dotenv';
 import path from 'path';
 import mongoose from 'mongoose';
+const __dirname = path.resolve();
 
 import { health } from './controllers/health.js';
 import { signupPost } from './controllers/signup.js';
