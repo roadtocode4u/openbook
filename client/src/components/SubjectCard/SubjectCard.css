@@ -1,0 +1,19 @@
+.subject-card {
+    background-color: #faf2f2;
+    margin: 20px;
+    padding: 10px;
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 3px black;
+    cursor: pointer;
+    position: relative;
+}
+
+@media screen and (max-width:735px) {
+
+    .subject-card{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

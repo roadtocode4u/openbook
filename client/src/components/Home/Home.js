@@ -11,6 +11,7 @@ import YouTube from './img/you-tube-logo.png';
 import Instagram from './img/instagram-logo.png';
 import './Home.css';
 import  subjectMaps  from '../../utils/subjectMaps.json';
+import SubjectCard from '../SubjectCard/SubjectCard';
 function Home() {
 
   const [branch, setBranch] = useState(localStorage.getItem("branch") || '');
@@ -68,15 +69,17 @@ function Home() {
         </div>
       </div>
 
-      <div>
-        {
+      <div className='container mt-5'>
+       <div className='row'>
+       {
           subjects?.map((subject)=>{
-            return (<h1>{subject}</h1>)
+            return <SubjectCard subject={subject}/>
           })
         }
+       </div>
       </div>
 
-      <div className='container text-center main-div'>
+      <div className='container text-center main-div mt-5'>
         <div className='row'>
           <div className='col-md-3'></div>
           <div className='col-md-6'><h3>How it Works</h3>
