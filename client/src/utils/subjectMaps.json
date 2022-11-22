@@ -2,29 +2,27 @@
     "ce-branch": [
         {
             "subjects": [
-                "Technical English",
-                "Engineering Mathematics– I",
+                "Engineering Mathematics – I",
                 "Engineering Physics",
                 "Engineering Chemistry",
-                "Computer-Aided Engineering Drawing",
-                "Computer Programming"
+                "Computer-Aided Engineering Drawing"
             ]
         },
         {
             "subjects": [
-                "D",
-                "E",
-                "F",
-                "G"
+                "Programming in C",
+                "Engineering Mathematics – II",
+                "Basic Electrical Engineering",
+                "Basic Electronics"
             ]
         },
         {
             "subjects": [
-                "G",
-                "H",
-                "I",
-                "M",
-                "N"
+                "Discrete Mathematical Structures",
+                "Fandametals of Data Structures",
+                "Object Oriented Programming",
+                "District Mathematics",
+                "Digital electronics & Logic Design"
             ]
         },
         {
