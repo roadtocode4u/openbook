@@ -1,14 +1,16 @@
 .subject-card {
     background-color: #faf2f2;
-    margin: 20px;
-    padding: 10px;
-    max-width: 300px;
+    margin: 30px;
+    padding: 15px;
+    max-width: 320px;
+    height: 0px;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 2px 3px black;
     cursor: pointer;
     position: relative;
 }
+
 
 @media screen and (max-width:735px) {
 
@@ -17,3 +19,18 @@
         margin-right: auto;
     }
 }
+
+@media screen and (max-width:1080px) {
+
+    .subject-card{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.study-material-card-open-ico{
+    position: absolute;
+    right: 10px;
+    height: 40px;
+    bottom: 5px;
+  }
