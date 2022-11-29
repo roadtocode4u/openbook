@@ -9,7 +9,7 @@ function SubjectCard({ title, subjectCode }) {
       <div className='subject-card'>
         <h5>{title}</h5>
         <h6>{subjectCode}</h6>
-        <Link to={`/course?courseCode=${subjectCode}`}>
+        <Link to={`/course-view?courseCode=${subjectCode}`}>
           <img src={IcoCardOpen}
             className="study-material-card-open-ico " />
         </Link>

@@ -27,14 +27,6 @@ try {
   console.log(`❌ Error:  ${err?.message}`);
 }
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
-  });
-}
-
 app.get('/health', health)
 
 app.post('/signup', signupPost)
@@ -50,6 +42,14 @@ app.get('/search_courses', searchCoursesGet)
 app.post('/studymaterial', studyMaterialPost)
 
 app.get('/studymaterial', studyMaterialGet)
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT} 🚀`);

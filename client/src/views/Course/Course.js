@@ -33,12 +33,13 @@ function Course() {
   return (
     <div>
       <div className='container'>
+        {console.log(course)}
         <div className='row course-header'>
-          <div className='col-md-4 '><img className='image-logo' src={course.thumbnail} /></div>
+          <div className='col-md-4 '><img className='image-logo' src={course?.thumbnail} /></div>
           <div className='col-md-8 text-center'>
-            <h3>{course.title}</h3>
+            <h3>{course?.title}</h3>
             <h4>{courseCode}</h4>
-            <h4><i class="fa-solid fa-credit-card"></i> {course.credits}</h4>
+            <h4><i class="fa-solid fa-credit-card"></i> {course?.credits}</h4>
           </div>
         </div>
       </div>
