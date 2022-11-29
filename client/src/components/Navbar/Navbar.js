@@ -30,7 +30,7 @@ export default function Navbar() {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/studymaterial/add">
+                                    <Link className="nav-link" to="/studymaterial-add">
                                         <h5><b className='nav-color'>AddStudyMaterial</b></h5>
                                     </Link>
                                 </li>

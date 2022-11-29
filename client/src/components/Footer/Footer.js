@@ -19,7 +19,7 @@ export default function Footer() {
                             <h6>Quick Links</h6>
                             <ul class="footer-links">
                                 <a href="/">Home</a>
-                                <a href="/studymaterial/add">Add Study Material</a>
+                                <a href="/studymaterial-add">Add Study Material</a>
                                 <a href="/signup">Signup</a>
                                 <a href="/login">Login</a>
                             </ul>

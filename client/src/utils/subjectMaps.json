@@ -27,81 +27,109 @@
         },
         {
             "subjects": [
-                "Principle Of Programming Language",
-                "Engineering Mathematics – III",
-                "Data Structure & Algorithum",
-                "Software Engineering",
-                "Microprocessor"
+                {"title":  "Principle Of Programming Language","subjectCode":"CSE401"},
+                {"title":  "Engineering Mathematics – III","subjectCode":"CSE402"},
+                {"title":  "Data Structure & Algorithum","subjectCode":"CSE403"},
+                {"title":  "Software Engineering","subjectCode":"CSE404"},
+                {"title":   "Microprocessor","subjectCode":"CSE405"}
             ]
         },
         {
             "subjects": [
-                "Principle Of Programming Language",
-                "Engineering Mathematics – III",
-                "Data Structure & Algorithum",
-                "Software Engineering",
-                "Microprocessor"
+                {"title":  "Principle Of Programming Language","subjectCode":"CSE501"},
+                {"title":  "Engineering Mathematics – III","subjectCode":"CSE502"},
+                {"title":  "Data Structure & Algorithum","subjectCode":"CSE503"},
+                {"title":  "Software Engineering","subjectCode":"CSE504"},
+                {"title":  "Microprocessor","subjectCode":"CSE505"}  
             ]
         },
         {
             "subjects": [
-                "Database Management System",
-                "Operating System",
-                "Computer Network & Security",
-                "Theory of Computation"
+                {"title":  "Database Management System","subjectCode":"CSE601"},
+                {"title":  "Operating System","subjectCode":"CSE602"},
+                {"title":  "Computer Network & Security","subjectCode":"CSE603"},
+                {"title":   "Theory of Computation","subjectCode":"CSE604"}   
             ]
         },
         {
             "subjects": [
-                "Data Science and Big Data Analytics",
-                "Web Technology",
-                "Artificial Intelligence",
-                "internship",
-                "Cloud Computing"
+                {"title":  "Data Science and Big Data Analytics","subjectCode":"CSE701"},
+                {"title":  "Web Technology","subjectCode":"CSE702"},
+                {"title":  "Artificial Intelligence","subjectCode":"CSE703"},
+                {"title":  "Internship","subjectCode":"CSE704"},
+                {"title":  "Cloud Computing","subjectCode":"CSE705"}
             ]
         },
         {
             "subjects": [
-                "Artificial Intelligence & Robitics",
-                "Data Analytics",
-                "Software Architecture & design"
-            ]
-        },
-        {
-            "subjects": [
-                "Machine Learning",
-                "Information & Cyber Security",
-                "Embedded & Real Time Operating Systems"
+                {"title":  "Artificial Intelligence & Robitics","subjectCode":"CSE801"},
+                {"title":  "Data Analytics","subjectCode":"CSE802"},
+                {"title":  "Software Architecture & design","subjectCode":"CSE803"}   
             ]
         }
     ],
     "entc-branch": [
         {
             "subjects": [
-                "A",
-                "B",
-                "C"
+                {"title":  "Engineering Mathematics – I","subjectCode":"ENTC101"},
+                {"title":  "Engineering Physics","subjectCode":"ENTC102"},
+                {"title":  "Engineering Chemistry","subjectCode":"ENTC103"},
+                {"title": "Computer-Aided Engineering Drawing","subjectCode":"ENTC104"}
             ]
         },
         {
             "subjects": [
-                "D",
-                "E",
-                "F"
+                {"title": "Programming in C","subjectCode":"ENTC201"},
+                {"title": "Engineering Mathematics – II","subjectCode":"ENTC202"},
+                {"title": "Basic Electrical Engineering","subjectCode":"ENTC203"},
+                {"title":  "Basic Electronics","subjectCode":"ENTC204"}
             ]
         },
         {
             "subjects": [
-                "G",
-                "H",
-                "I"
+                {"title": "Digital Techniques","subjectCode":"ENTC301"},
+                {"title": "Applied Electronics","subjectCode":"ENTC302"},
+                {"title": "Electric Circuits and Networks","subjectCode":"ENTC303"},
+                {"title":  "Electronicmeasurements and Instrumentation","subjectCode":"ENTC304"},
+                {"title":  "Principles of Electronic Communication","subjectCode":"ENTC305"}
             ]
         },
         {
             "subjects": [
-                "J",
-                "K",
-                "L"
+                {"title": "Linear Integrated Circuits","subjectCode":"ENTC401"},
+                {"title": "Consumer Electronics","subjectCode":"ENTC402"},
+                {"title": "Microcontroller and Applications","subjectCode":"ENTC403"},
+                {"title":  "Basic Power Electronics","subjectCode":"ENTC404"},
+                {"title":  "Digital Communication Systems","subjectCode":"ENTC405"},
+                {"title":  "Maintenance of Electronics Equipment and Eda Tools Practices","subjectCode":"ENTC406"}
+            ]
+        },
+        {
+            "subjects": [
+                {"title": "Environmental Studies","subjectCode":"ENTC501"},
+                {"title": "Control Systems and Plc","subjectCode":"ENTC502"},
+                {"title": "Embedded Systems","subjectCode":"ENTC503"},
+                {"title":  "Mobile and Wireless Communication","subjectCode":"ENTC504"}
+            ]
+        },
+        {
+            "subjects": [
+                {"title": "Management","subjectCode":"ENTC601"},
+                {"title": "Computer Networking and Data Communication","subjectCode":"ENTC602"},
+                {"title": "Emerging Trends in Electronics","subjectCode":"ENTC603"},
+                {"title":  "Entrepreneurship Development","subjectCode":"ENTC604"}
+            ]
+        },
+        {
+            "subjects": [
+                {"title": "Fiber Optic Communication","subjectCode":"ENTC701"},
+                {"title": "Innovation & Entrepreneurship","subjectCode":"ENTC702"},
+                {"title": "Digital Business Management","subjectCode":"ENTC703"}
+            ]
+        },
+        {
+            "subjects": [
+                {"title": "Internship","subjectCode":"ENTC801"}
             ]
         }
     ],
