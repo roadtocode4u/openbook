@@ -12,6 +12,7 @@ function StudyMaterial() {
   const [url, setUrl] = useState("");
   const [contentType, setContentType] = useState("");
   const [courseCode, setCourseCode] = useState("");
+  const [isTheory, setIsTheory] = useState("");
 
   if(!isAdmin()){
     swal("Only admin user is allowed to add Study Material!")
@@ -32,6 +33,7 @@ function StudyMaterial() {
       description: description,
       url: url,
       contentType: contentType,
+      isTheory: isTheory,
       courseCode: courseCode
     })
 
@@ -46,6 +48,7 @@ function StudyMaterial() {
     setDescription("");
     setUrl("");
     setContentType("");
+    setIsTheory("");
     setCourseCode("");
   }
   return (
@@ -106,6 +109,14 @@ function StudyMaterial() {
                     <option value="pdf">PDF</option>
                     <option value="link">Link</option>
                     <option value="video">Video</option>
+                  </select>
+                </div>
+                <div className="mb-3">
+                  <select className="form-select" aria-label="Select Content Choice"
+                    value={isTheory} onChange={(e) => { setIsTheory(e.target.value) }} >
+                    <option> Select Content Choice </option>
+                    <option value="true">Theory</option>
+                    <option value="false">Practical</option>
                   </select>
                 </div>
                 <button className="button-add-material w-100 mb-3" type="button" onClick={addStudyMaterial} >
