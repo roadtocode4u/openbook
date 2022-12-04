@@ -9,6 +9,17 @@ function Course() {
   const courseCode = searchParams.get("courseCode");
 
   const [studymaterial, setStudyMaterial] = useState([]);
+  
+  const [studyMaterialTheory, setStudyMaterialTheory] = useState([]);
+  const [studyMaterialPractical, setStudyMaterialPractical] = useState([]);
+
+  useEffect(() => {
+    const theoryMaterials = studymaterial.filter((material) =>{ return material.isTheory })
+    const practicalMaterials = studymaterial.filter((material) =>{ return !material.isTheory })
+
+    setStudyMaterialTheory(theoryMaterials);
+    setStudyMaterialPractical(practicalMaterials);
+  }, [studymaterial]);
 
   const [course, setCourse] = useState({});
 
@@ -33,7 +44,6 @@ function Course() {
   return (
     <div>
       <div className='container'>
-        {console.log(course)}
         <div className='row course-header'>
           <div className='col-md-4 '><img className='image-logo' src={course?.thumbnail} /></div>
           <div className='col-md-8 text-center'>
@@ -49,38 +59,26 @@ function Course() {
           <div className='col-md-6 text-center'>
             <h4>Theory</h4>
             {
-              studymaterial?.map((material, index) => {
-                if (material.isTheory)
-                {
+              studyMaterialTheory?.map((material, index) => {
                   return (
                     <StudyMaterialCard
                       title={material.title}
                       description={material.description}
                       contentType={material.contentType} />
                   )
-                }
-                else {
-                  return(<> </>);
-                }
               })
             }
           </div>
           <div className='col-md-6 text-center'>
             <h4>Practical</h4>
             {
-              studymaterial?.map((material, index) => {
-                if(!material.isTheory){
+              studyMaterialPractical?.map((material, index) => {
                   return (
                     <StudyMaterialCard
                       title={material.title}
                       description={material.description}
                       contentType={material.contentType} />
                   )
-                }
-                else
-                {
-                  return(<> </>);
-                }
               })
             }
           </div>
