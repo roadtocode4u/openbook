@@ -36,7 +36,7 @@ function StudyMaterial() {
     })
 
     if (response.data.success) {
-      swal("Study material added successfully!!");
+      swal("Study material added successfully!!")
     }
     else {
       swal(response.data.message)

@@ -5,7 +5,8 @@ const studyMaterialSchema = new mongoose.Schema({
     description: { type: String, required: [true, 'description cannot be empty'] },
     url: { type: String, required: [true, 'url cannot be empty'] },
     contentType: { type: String, required: [true, 'contenttype cannot be empty'] },
-    course: {type: mongoose.Schema.Types.ObjectId, ref: "Course"}
+    course: {type: mongoose.Schema.Types.ObjectId, ref: "Course"},
+    isTheory: {type: Boolean, default: true}
 },
     {
         timestamps: true

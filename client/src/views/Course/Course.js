@@ -46,17 +46,44 @@ function Course() {
 
       <div className='course-material-container mt-4'>
         <div className='row'>
-          {
-            studymaterial?.map((material, index) => {
-              return (
-                <div className='col-md-4 col-lg-3 d-flex justify-content-center' key={index}>
-                  <StudyMaterialCard
-                    title={material.title}
-                    description={material.description}
-                    contentType={material.contentType} />
-                </div>)
-            })
-          }
+          <div className='col-md-6 text-center'>
+            <h4>Theory</h4>
+            {
+              studymaterial?.map((material, index) => {
+                if (material.isTheory)
+                {
+                  return (
+                    <StudyMaterialCard
+                      title={material.title}
+                      description={material.description}
+                      contentType={material.contentType} />
+                  )
+                }
+                else {
+                  return(<> </>);
+                }
+              })
+            }
+          </div>
+          <div className='col-md-6 text-center'>
+            <h4>Practical</h4>
+            {
+              studymaterial?.map((material, index) => {
+                if(!material.isTheory){
+                  return (
+                    <StudyMaterialCard
+                      title={material.title}
+                      description={material.description}
+                      contentType={material.contentType} />
+                  )
+                }
+                else
+                {
+                  return(<> </>);
+                }
+              })
+            }
+          </div>
         </div>
       </div>
     </div>
