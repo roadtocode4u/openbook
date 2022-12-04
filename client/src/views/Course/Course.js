@@ -57,7 +57,7 @@ function Course() {
       <div className='course-material-container mt-4'>
         <div className='row'>
           <div className='col-md-6 text-center'>
-            <h4>Theory</h4>
+            <h4 className='mt-3 mb-4'>Theory</h4>
             {
               studyMaterialTheory?.map((material, index) => {
                   return (
@@ -70,7 +70,7 @@ function Course() {
             }
           </div>
           <div className='col-md-6 text-center'>
-            <h4>Practical</h4>
+            <h4 className='mt-3 mb-4'>Practical</h4>
             {
               studyMaterialPractical?.map((material, index) => {
                   return (
