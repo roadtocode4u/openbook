@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import './Home.css';
 import headerImage from './img/heading-image.png';
+import keystoneLogo from './img/keystone-logo.jpeg';
 import learnImage from './img/learn-img.png';
 import buildImage from './img/build-img.png';
 import connectImage from './img/connect-img.png';
@@ -9,7 +11,6 @@ import Linkdin from './img/linkdin-logo.png'
 import Twitter from './img/twitter-logo.png';
 import YouTube from './img/you-tube-logo.png';
 import Instagram from './img/instagram-logo.png';
-import './Home.css';
 import  subjectMaps  from '../../utils/subjectMaps.json';
 import SubjectCard from '../SubjectCard/SubjectCard';
 function Home() {
@@ -33,9 +34,9 @@ function Home() {
       <div className='container'>
         <div className='row'>
           <div className='col-md-6'>
-            <div>
+            <div className='mt-4'>
               <img
-                src={headerImage}
+                src={keystoneLogo}
                 alt=""
                 className="img-fluid mx-auto d-block header-display-image"
               />
@@ -49,8 +50,6 @@ function Home() {
                 <select className='select-branch' defaultValue={branch} onChange={(e) => { setBranch(e.target.value) }}>
                   <option>Select Branch</option>
                   <option value="ce-branch">Computer Engineering</option>
-                  <option value="mech-branch">Mechanical Engineering</option>
-                  <option value="entc-branch">Electronic & Communication Engineering</option>
                 </select>
                 <select className='select-sem' defaultValue={sem} onChange={(e) => { setSem(e.target.value) }}>
                   <option>Select Semester</option>
