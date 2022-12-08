@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import headerImage from './img/heading-image.png';
 import keystoneLogo from './img/keystone-logo.jpeg';
 import learnImage from './img/learn-img.png';
 import buildImage from './img/build-img.png';
