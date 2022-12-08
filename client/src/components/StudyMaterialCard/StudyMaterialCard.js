@@ -5,7 +5,7 @@ import ImgPdf from "./pdf.png"
 import ImgVideo from "./video.png"
 import IcoCardOpen from "./card-open-ico.png"
 
-function StudyMaterialCard(props) {
+function StudyMaterialCard({title,description,contentType}) {
 
   const ContentTypeImageMap = {
     "link": ImgLink,
@@ -15,9 +15,9 @@ function StudyMaterialCard(props) {
 
   return (
     <div className='study-material-card'>
-      <h6 className="study-material-card-title text-center">{props.title}</h6>
-      <p className='study-material-card-description text-center'>{props.description}</p>
-      <img src={ContentTypeImageMap[props.contentType]}
+      <h6 className="study-material-card-title text-center">{title}</h6>
+      <p className='study-material-card-description text-center'>{description}</p>
+      <img src={ContentTypeImageMap[contentType]}
         className="study-material-card-header-img" />
       <img src={IcoCardOpen}
         className="study-material-card-open-ico " />
