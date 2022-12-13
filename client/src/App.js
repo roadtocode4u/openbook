@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
+import Home from './views/Home/Home';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
 import Course from './views/Course/Course';

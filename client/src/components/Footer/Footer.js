@@ -33,13 +33,12 @@ export default function Footer() {
                                 <li>React.js</li>
                                 <li>MongoDB</li>
                                 <li>Bootstrap</li>
-                                <li>Material UI</li>
                             </ul>
                         </div>
 
                         <div class="col-xs-6 col-md-3">
                             <h6>About Me</h6>
-                            <p className="paragraph"><i class="fa-solid fa-location-dot"></i> Nagpur, Maharashtra</p>
+                            <p className="paragraph"><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</p>
                             <p className="paragraph"><i class="fa-solid fa-phone"></i> +91-8805803087</p>
                             <p className="paragraph"><i class="fa-solid fa-envelope"></i>  roadtocode4u@gmail.com
                             </p>

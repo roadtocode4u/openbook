@@ -11,7 +11,7 @@ import Twitter from './img/twitter-logo.png';
 import YouTube from './img/you-tube-logo.png';
 import Instagram from './img/instagram-logo.png';
 import  subjectMaps  from '../../utils/subjectMaps.json';
-import SubjectCard from '../SubjectCard/SubjectCard';
+import SubjectCard from './../../components/SubjectCard/SubjectCard';
 function Home() {
 
   const [branch, setBranch] = useState(localStorage.getItem("branch") || '');
