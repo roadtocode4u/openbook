@@ -64,7 +64,9 @@ function Course() {
                     <StudyMaterialCard
                       title={material.title}
                       description={material.description}
-                      contentType={material.contentType} />
+                      contentType={material.contentType} 
+                      url={material.url}
+                      />
                   )
               })
             }
@@ -77,7 +79,8 @@ function Course() {
                     <StudyMaterialCard
                       title={material.title}
                       description={material.description}
-                      contentType={material.contentType} />
+                      contentType={material.contentType}
+                      url={material.url} />
                   )
               })
             }
