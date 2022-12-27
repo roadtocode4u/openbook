@@ -4,18 +4,28 @@ import ImgLink from "./link.png"
 import ImgPdf from "./pdf.png"
 import ImgVideo from "./video.png"
 import IcoCardOpen from "./card-open-ico.png"
+import { Link } from 'react-router-dom'
 
-function StudyMaterialCard({title,description,contentType,url}) {
-
-  function viewStudyMaterial()
-  {
-    window.open(url, '_blank').focus();
-  }
+function StudyMaterialCard({ title, description, contentType, url }) {
 
   const ContentTypeImageMap = {
     "link": ImgLink,
     "pdf": ImgPdf,
     "video": ImgVideo
+  }
+
+  var openingType = "";
+
+  if (contentType === "link") {
+    openingType = url;
+  }
+
+  else if (contentType === "pdf") {
+    openingType = url;
+  }
+
+  else if (contentType === "video") {
+    openingType = `/show-material/${url}`
   }
 
   return (
@@ -24,8 +34,21 @@ function StudyMaterialCard({title,description,contentType,url}) {
       <p className='study-material-card-description text-center'>{description}</p>
       <img src={ContentTypeImageMap[contentType]}
         className="study-material-card-header-img" />
-      <img src={IcoCardOpen} onClick={viewStudyMaterial}
-        className="study-material-card-open-ico " />
+
+      <div>
+        {
+          contentType === "video" ?
+            (
+              <Link to={openingType}>
+                <img src={IcoCardOpen} className="study-material-card-open-ico " />
+              </Link>
+            ) : (
+              <a href={openingType} target="_blank">
+                <img src={IcoCardOpen} className="study-material-card-open-ico " />
+              </a>
+            )
+        }
+      </div>
     </div>
   )
 }

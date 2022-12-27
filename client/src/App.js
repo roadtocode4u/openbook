@@ -6,6 +6,7 @@ import Signup from './components/Signup/Signup';
 import Login from './components/Login/Login';
 import Course from './views/Course/Course';
 import StudyMaterial from './views/StudyMaterial/StudyMaterial'
+import ShowMaterial from './components/ShowMaterial/ShowMaterial';
 import {
   BrowserRouter,
   Routes,
@@ -25,6 +26,7 @@ function App() {
         <Route path="/studymaterial-add" element={<StudyMaterial/>} />
         <Route path="/course-view" element={<Course />} />
         <Route path="/add-study-material" element={<StudyMaterial/>} />
+        <Route path="/show-material/:url" element={<ShowMaterial/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
