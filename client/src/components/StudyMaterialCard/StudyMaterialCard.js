@@ -14,7 +14,7 @@ function StudyMaterialCard({ title, description, contentType, url }) {
     "video": ImgVideo
   }
 
-  var openingType = "";
+  let openingType = "";
 
   if (contentType === "link") {
     openingType = url;
