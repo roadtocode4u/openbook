@@ -2,10 +2,10 @@
     "ce-branch": [
         {
             "subjects": [
-                {"title": "Engineering Mathematics – I","subjectCode":"CSE101"},
-                {"title": "Engineering Physics","subjectCode":"CSE102"},
-                {"title": "Engineering Chemistry","subjectCode":"CSE103"},
-                {"title": "Computer-Aided Engineering Drawing","subjectCode":"CSE104"}
+                {"title": "C Programming","subjectCode":"CSE101"},
+                {"title": "C++ Programming","subjectCode":"CSE102"},
+                {"title": "Python Programming","subjectCode":"CSE103"},
+                {"title": "Javascript","subjectCode":"CSE104"}
             ]
         },
         {
