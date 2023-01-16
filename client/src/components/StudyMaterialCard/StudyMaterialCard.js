@@ -17,11 +17,11 @@ function StudyMaterialCard({ title, description, contentType, url }) {
   let openingType = "";
 
   if (contentType === "link") {
-    openingType = url;
+    openingType = `show-pdf/${url}`;
   }
 
   else if (contentType === "pdf") {
-    openingType = url;
+    openingType = `show-pdf/${url}`;
   }
 
   else if (contentType === "video") {
@@ -43,9 +43,12 @@ function StudyMaterialCard({ title, description, contentType, url }) {
                 <img src={IcoCardOpen} className="study-material-card-open-ico " />
               </Link>
             ) : (
-              <a href={openingType} target="_blank">
-                <img src={IcoCardOpen} className="study-material-card-open-ico " />
-              </a>
+              // <a href={openingType} target="_blank">
+              //   <img src={IcoCardOpen} className="study-material-card-open-ico " />
+              // </a>
+              <Link to={openingType}>
+               <img src={IcoCardOpen} className="study-material-card-open-ico " />
+              </Link>
             )
         }
       </div>

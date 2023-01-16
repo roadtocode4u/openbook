@@ -7,6 +7,7 @@ import Login from './components/Login/Login';
 import Course from './views/Course/Course';
 import StudyMaterial from './views/StudyMaterial/StudyMaterial'
 import ShowMaterial from './components/ShowMaterial/ShowMaterial';
+import PdfViwer from './components/PdfViwer/PdfViwer'
 import {
   BrowserRouter,
   Routes,
@@ -27,6 +28,7 @@ function App() {
         <Route path="/course-view" element={<Course />} />
         <Route path="/add-study-material" element={<StudyMaterial/>} />
         <Route path="/show-material/:url" element={<ShowMaterial/>} />
+        <Route path='/show-pdf' element={<PdfViwer/>} />
       </Routes>
       <Footer />
     </BrowserRouter>

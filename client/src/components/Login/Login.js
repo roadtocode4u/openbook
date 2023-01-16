@@ -59,7 +59,7 @@ function Login() {
                 />
               </div>
               <button className="login-page-btn w-100 mb-3" type="button" onClick={checkLogin}>
-                <i class="fa-solid fa-right-to-bracket"></i> Login
+              <i class="fa-solid fa-right-to-bracket"></i> Login
               </button>
             </form>
           </div>

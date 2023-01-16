@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <>
             <div className='navbar-main-div'>
-                <nav className="navbar navbar-expand-lg sticky-top navbar-light navbar-openbook sticky-top shadow-sm">
+                <nav className="navbar navbar-expand-lg sticky-top navbar-light navbar-openbook bg-body-tertiary shadow-sm">
                     <div className="container-fluid">
                         <Link className="navbar-brand " to="#">
                             <h3><b className='nav-color'> <img src={logo}/> OpenBook</b></h3>
