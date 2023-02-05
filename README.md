@@ -6,7 +6,12 @@
 
 ![output-1](./Screenshot-1.png)
 
+**Add StudyMaterial**
+
+![output](./screenshot-4.png)
+
 **StudyMaterial**
+
 ![output-2](./Screenshot-2.png)
 
 ![output-3](./Screenshot-3.png)
