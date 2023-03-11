@@ -9,7 +9,7 @@ export default function Navbar() {
                 <nav className="navbar navbar-expand-lg sticky-top navbar-light navbar-openbook bg-body-tertiary shadow-sm">
                     <div className="container-fluid">
                         <Link className="navbar-brand " to="#">
-                            <h3><b className='nav-color'> <img src={logo}/> OpenBook</b></h3>
+                            <h3><b className='nav-color'> <img src={logo} /> OpenBook</b></h3>
                         </Link>
                         <button
                             className="navbar-toggler nav-color"

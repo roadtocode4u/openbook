@@ -14,18 +14,27 @@ function StudyMaterial() {
   const [courseCode, setCourseCode] = useState("");
   const [isTheory, setIsTheory] = useState("");
 
-  if(!isAdmin()){
-    swal("Only admin user is allowed to add Study Material!")
-    .then(() => {
-      window.location = "/"
-    });
-   
+  if (!isAdmin()) {
+    swal({
+      title: "😥",
+      text: "Only admin user is allowed to add Study Material!",
+      icon: "warning",
+    })
+      .then(() => {
+        window.location = "/"
+      });
+
   }
   console.log(isAdmin());
 
   async function addStudyMaterial() {
-    if(!title || !description || !url || !contentType || !courseCode){
+    if (!title || !description || !url || !contentType || !courseCode) {
       swal("please fill all the fields");
+      swal({
+        title: "⚠️",
+        text: "please fill all the fields",
+        icon: "warning",
+      })
       return;
     }
     const response = await axios.post('/studymaterial', {
@@ -38,10 +47,18 @@ function StudyMaterial() {
     })
 
     if (response.data.success) {
-      swal("Study material added successfully!!");
+      swal({
+        title: "🏆",
+        text: "Study material added successfully!!",
+        icon: "success",
+      })
     }
     else {
-      swal(response.data.message)
+      swal({
+        title: "😥",
+        text: response.data.message,
+        icon: "warning",
+      })
     }
 
     setTitle("");
