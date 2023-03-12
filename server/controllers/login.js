@@ -1,6 +1,7 @@
 import md5 from 'md5';
 
 import User from '../models/User.js';
+import responder from '../util/responder.js';
 
 export const loginPost = async (req, res) => {
     const { email, password } = req.body
@@ -11,10 +12,7 @@ export const loginPost = async (req, res) => {
     if (!password) errorMessages.push("password cannot be empty")
 
     if (errorMessages.length) {
-        return res.json({
-            success: false,
-            message: errorMessages.toString()
-        });
+        return responder(res, null, errorMessages.toString(), false);
     }
 
     const user = await User.findOne({

@@ -1,4 +1,5 @@
 import Course from '../models/Course.js';
+import responder from '../util/responder.js';
 
 export const coursePost = async (req, res) => {
     const { title, courseCode, branch, sem, credits, thumbnail } = req.body
@@ -13,11 +14,7 @@ export const coursePost = async (req, res) => {
     })
 
     const savedCourse = await newCourse.save();
-    res.json({
-        success: true,
-        data: savedCourse,
-        message: "New Course is added successfully",
-    });
+    responder(res, savedCourse, "New Course is added successfully");
 }
 
 export const courseGet = async (req, res) => {
@@ -26,10 +23,7 @@ export const courseGet = async (req, res) => {
     const course = await Course.findOne({
         courseCode: courseCode
     });
-    res.json({
-        success: true,
-        data: course
-    })
+    responder(res, course, "course featch successfully!!");
 }
 
 export const searchCoursesGet = async (req, res) => {
@@ -39,10 +33,7 @@ export const searchCoursesGet = async (req, res) => {
         branch,
         sem
     });
-    res.json({
-        success: true,
-        data: courses
-    })
+    responder(res, courses, "course featch successfully!!");
 }
 
 

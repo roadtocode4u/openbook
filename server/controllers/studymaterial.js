@@ -1,12 +1,13 @@
 import StudyMatrial from '../models/StudyMaterial.js';
 import Course from '../models/Course.js';
+import responder from '../util/responder.js';
 
 export const studyMaterialPost = async (req, res) => {
     const { title, description, url, contentType, courseCode, isTheory} = req.body;
 
     const course = await Course.findOne({ courseCode });
     if (!course) {
-        return res.json({ status: false, data: {}, message: 'Course not found' });
+        return responder(res, null, 'Course not found', false);
     }
 
     const newStudyMaterial = new StudyMatrial({
@@ -19,12 +20,7 @@ export const studyMaterialPost = async (req, res) => {
     });
 
     const savedStudyMaterial = await newStudyMaterial.save();
-    res.json({
-        status: true,
-        data: savedStudyMaterial,
-        message: "Study Material Added Successfully",
-    });
-
+    responder(res, savedStudyMaterial, "Study Material Added Successfully");
 }
 
 export const studyMaterialGet = async (req, res) => {
@@ -40,9 +36,5 @@ export const studyMaterialGet = async (req, res) => {
     });
      
     // console.log(studymaterials);
-
-    res.json({
-        success: true,
-        data: studymaterials
-    })
+    responder(res, studymaterials, "Study material fetch successfully!!");
 }
