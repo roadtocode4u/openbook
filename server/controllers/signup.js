@@ -1,6 +1,7 @@
 import md5 from 'md5';
 
 import User from '../models/User.js';
+import responder from '../util/responder.js';
 
 export const signupPost = async (req, res) => {
     const { fullName, email, password, mobile } = req.body;
