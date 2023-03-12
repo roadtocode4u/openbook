@@ -1,8 +1,17 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { openBookUser } from './../../utils/getUser'
+
 import './Navbar.css';
 import logo from './favicon.png'
+
 export default function Navbar() {
+
+    function logOut() {
+        localStorage.removeItem('openBookUser');
+        window.location.href = '/login'
+    }
+
     return (
         <>
             <div className='navbar-main-div'>
@@ -39,16 +48,27 @@ export default function Navbar() {
                         <div className="collapse navbar-collapse navbar-sizing" id="navbarNav" style={{ display: "flex", flexDirection: "row", justifyContent: "flex-end" }}>
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/signup">
-                                        <button className='nav_register nav-color signup-btn'> <i class="fa-solid fa-user-plus"></i>  <b>Signup</b></button>
-                                    </Link>
+                                    {!openBookUser && (
+                                        <Link className="nav-link" to="/signup">
+                                            <button className='nav_register nav-color signup-btn'> <i class="fa-solid fa-user-plus"></i>  <b>Signup</b></button>
+                                        </Link>
+                                    )}
                                 </li>
                             </ul>
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/login">
-                                        <button className='nav_register nav-color login-btn'><i class="fa-solid fa-right-to-bracket"></i> <b>Login</b></button>
-                                    </Link>
+                                    {!openBookUser && (
+                                        <Link className="nav-link" to="/login">
+                                            <button className='nav_register nav-color login-btn'><i class="fa-solid fa-right-to-bracket"></i> <b>Login</b></button>
+                                        </Link>
+                                    )}
+                                </li>
+                                <li>
+                                    {openBookUser && (
+                                        <Link className="nav-link" to="/">
+                                            <button type="button" className='logout-btn' onClick={logOut}> <i class="fa-solid fa-right-from-bracket"></i> <b> Logout</b></button>
+                                        </Link>
+                                    )}
                                 </li>
                             </ul>
 
