@@ -12,18 +12,12 @@ export const signupPost = async (req, res) => {
         if (!password) emptyFields.push('password');
         if (!mobile) emptyFields.push('mobile');
 
-        return res.json({
-            status: false,
-            message: `Please provide ${emptyFields.join(', ')}`
-        })
+        return responder(res, null, `Please provide ${emptyFields.join(', ')}`, false);
     }
 
     const user = await User.findOne({ email: email })
     if (user) {
-        return res.json({
-            success: false,
-            message: "user already exist"
-        })
+        return responder(res, null, "user already exist", false);
     }
     const newUser = new User({
         fullName,
@@ -32,9 +26,5 @@ export const signupPost = async (req, res) => {
         mobile
     })
     const savedUser = await newUser.save();
-    res.json({
-        success: true,
-        data: savedUser,
-        message: "user created successfully"
-    })
+    responder(res, savedUser, "user created successfully");
 }

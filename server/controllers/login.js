@@ -12,7 +12,7 @@ export const loginPost = async (req, res) => {
     if (!password) errorMessages.push("password cannot be empty")
 
     if (errorMessages.length) {
-        responder(res, null, errorMessages.toString(), false);
+        return responder(res, null, errorMessages.toString(), false);
     }
 
     const user = await User.findOne({
