@@ -3,11 +3,8 @@ import './Login.css';
 import axios from 'axios';
 import swal from "sweetalert";
 import headerImage from './img/header-login-img.png';
-import { useNavigate } from 'react-router-dom'
 
 function Login() {
-
-  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +22,7 @@ function Login() {
         text: "Login Successfully !!",
         icon: "success",
       })
-      navigate('/')
+      window.location.href = '/'
 
     }
     else {

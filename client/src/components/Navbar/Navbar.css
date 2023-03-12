@@ -41,3 +41,18 @@
 .login-btn:hover {
     box-shadow: 3px 4px 2px -2px rgb(0, 0, 0);
 }
+
+.logout-btn{
+    padding: 5px;
+    margin: 3px;
+    width: 120px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(208, 8, 8);
+    box-shadow: 0px 3px 1px -2px rgb(0, 0, 0);
+}
+
+.logout-btn:hover {
+    box-shadow: 3px 4px 2px -2px rgb(0, 0, 0);
+}
