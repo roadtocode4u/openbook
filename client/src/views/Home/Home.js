@@ -79,12 +79,15 @@ function Home() {
 
       <div className='container text-center main-div mt-5'>
         <div className='row'>
-          <div className='col-md-3'></div>
-          <div className='col-md-6'><h3>How it Works</h3>
-            <p>This is the website we wish we had when we were learning on our own.
-              We scour the internet looking for only the best resources to supplement
-              your learning and present them in a logical order.</p></div>
-          <div className='col-md-3'>
+          <div className='col-md-2'></div>
+          <div className='col-md-8'><h3>How it Works</h3>
+            <p>This is <b>Open Book</b> Project I developed this project because my collage student can see 
+              all the notes and reading material in one place instead of searching for them in a WhatsApp 
+              group.In this project, we can add study material <b>Branch-wise</b> and <b>Subject-wise</b>. Anyone can
+               access notes anytime, anywhere. Other students also view those study materials free of cost.
+               Only <b>Admin</b> (teachers) who has admin access only they can add the study materials but everyone 
+               can view the study materials in one place.</p></div>
+          <div className='col-md-2'>
           </div>
         </div>
       </div>

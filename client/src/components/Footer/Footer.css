@@ -6,6 +6,9 @@
     line-height: 24px;
     color: #dfdbdb;
   }
+  .links{
+    text-decoration: none;
+  }
   .site-footer hr {
     border-top-color: #bbb;
     opacity: 0.5;
