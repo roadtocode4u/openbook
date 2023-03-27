@@ -18,10 +18,10 @@ export default function Footer() {
                         <div class="col-xs-6 col-md-3">
                             <h6>Quick Links</h6>
                             <ul class="footer-links">
-                                <a href="/">Home</a>
-                                <a href="/studymaterial-add">Add Study Material</a>
-                                <a href="/signup">Signup</a>
-                                <a href="/login">Login</a>
+                                <a href="/" className="links">Home</a>
+                                <a href="/studymaterial-add" className="links">Add Study Material</a>
+                                <a href="/signup" className="links">Signup</a>
+                                <a href="/login" className="links">Login</a>
                             </ul>
                         </div>
 
@@ -39,18 +39,14 @@ export default function Footer() {
                         <div class="col-xs-6 col-md-3">
                             <h6>About Me</h6>
                             <p className="paragraph"><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</p>
-                            <p className="paragraph"><i class="fa-solid fa-phone"></i> +91-8805803087</p>
-                            <p className="paragraph"><i class="fa-solid fa-envelope"></i>  roadtocode4u@gmail.com
+                            <p className="paragraph"><i class="fa-solid fa-phone"></i> +91-7821011979</p>
+                            <p className="paragraph"><i class="fa-solid fa-envelope"></i> itspinki05@gmail.com
                             </p>
                           <div className="footer-div">
                         
-                                   <div className="footer-div icon-div1"><i class="fa-brands fa-linkedin"></i></div>
+                                   <a href="https://www.linkedin.com/in/vaibhavihole31/" target="_blank"><div className="footer-div icon-div1"><i class="fa-brands fa-linkedin"></i></div></a>
                                 
-                                    <div className="footer-div icon-div2"><i class="fa-brands fa-github"></i></div>
-                                
-                                    <div className="footer-div icon-div3"><i class="fa-brands fa-instagram"></i></div>
-
-                             
+                                   <a href="https://github.com/Vaibhavihole31" target="_blank"><div className="footer-div icon-div2"><i class="fa-brands fa-github"></i></div></a>     
                           </div>
                         </div>
                     </div>
