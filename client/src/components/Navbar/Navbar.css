@@ -1,19 +1,25 @@
-/* .navbar-main-div{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: white;
-} */
-
-.nav-color {
+.navbar {
+    box-shadow: 0px 0px 0.5px 0.5px gray;
+    z-index: 50;
+  }
+  .namaste-pas-heading-h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    margin-left: 30px;
+  }
+  
+  .nav-color {
     color: black;
-}
-
-.navbar-toggler {
+  }
+  
+  .navbar-toggler {
     color: black;
-}
-
+  }
+  
+  .btn {
+    font-size: 18px;
+  }
+  
 .signup-btn {
     padding: 5px;
     margin: 3px;
