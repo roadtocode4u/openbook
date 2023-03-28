@@ -11,6 +11,10 @@
     justify-content: center;
 }
 
+.loader-off{
+    display: none;
+}
+
 .loader-box{
     margin-top: 250px;
     display: flex;
