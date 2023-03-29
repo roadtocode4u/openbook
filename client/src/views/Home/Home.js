@@ -12,7 +12,6 @@ import YouTube from './img/you-tube-logo.png';
 import Instagram from './img/instagram-logo.png';
 import  subjectMaps  from '../../utils/subjectMaps.json';
 import SubjectCard from './../../components/SubjectCard/SubjectCard';
-import Loader from '../../components/Loader/Loader'
 function Home() {
 
   const [branch, setBranch] = useState(localStorage.getItem("branch") || '');
