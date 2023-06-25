@@ -81,12 +81,7 @@ function Home() {
         <div className='row'>
           <div className='col-md-2'></div>
           <div className='col-md-8'><h3>How it Works</h3>
-            <p>This is <b>Open Book</b> Project I developed this project because my collage student can see 
-              all the notes and reading material in one place instead of searching for them in a WhatsApp 
-              group.In this project, we can add study material <b>Branch-wise</b> and <b>Subject-wise</b>. Anyone can
-               access notes anytime, anywhere. Other students also view those study materials free of cost.
-               Only <b>Admin</b> (teachers) who has admin access only they can add the study materials but everyone 
-               can view the study materials in one place.</p></div>
+          The <b>Open Book Project </b>is a platform for college students to access their study materials conveniently in one centralized location. It allows the addition of study materials categorized by branch and subject, with exclusive admin privileges. Students can access the materials anytime, anywhere, and free of charge, eliminating the need for extensive searching. The project aims to provide a seamless experience by ensuring easy availability and accessibility of study materials. 📚</div>
           <div className='col-md-2'>
           </div>
         </div>
@@ -101,7 +96,7 @@ function Home() {
               className="img-fluid mx-auto d-block lbc1-image"
             />
             <h5 className='text-center mt-2 mb-3'>Learn</h5>
-            <p className='text-center'>Learn from a curriculum with the best curated online tutorials, blogs, and courses.</p>
+            <p className='text-center'>Access a comprehensive curriculum featuring handpicked online tutorials, blogs, and courses to enhance your learning experience.</p>
           </div>
           <div className='col-md-4'>
             <img
@@ -110,7 +105,7 @@ function Home() {
               className="img-fluid mx-auto d-block lbc2-image"
             />
             <h5 className='text-center mt-4 mb-3'>Build</h5>
-            <p className='text-center'>Build dozens of portfolio-worthy projects along the way, from simple scripts to full programs and deployed websites.</p>
+            <p className='text-center'>Engage in the development of numerous portfolio-worthy projects throughout your learning journey, ranging from basic scripts to complete programs and live websites.</p>
           </div>
           <div className='col-md-4'>
             <img
@@ -119,7 +114,7 @@ function Home() {
               className="img-fluid mx-auto d-block lbc-image"
             />
             <h5 className='text-center mt-3 mb-3'>Connect</h5>
-            <p className='text-center'>You're not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
+            <p className='text-center'>Receive support and guidance from a friendly community of developers, both beginners and experts, as you embark on your learning journey.</p>
           </div>
         </div>
       </div>
