@@ -1,6 +1,6 @@
 # OpenBook 📖
 
-## ✏️Learn Faster, Study Better !
+## ✏️Learn Faster, Study Better!
 
 **Homepage**
 
@@ -34,5 +34,5 @@ I Share this project with my HOD and he was very impressed he implemented this p
 
 In the future I want to make this application scalable so that we can implement this in other colleges I don't want to restrict this application to only my college.
 
-[!JSON FILE](https://github.com/roadtocode4u/openbook/blob/main/client/src/utils/subjectMaps.json) When editing this JSON file, please add subjects organized by semester.
+[JSON FILE](https://github.com/roadtocode4u/openbook/blob/main/client/src/utils/subjectMaps.json) When editing this JSON file, please add subjects organized by semester.
 
