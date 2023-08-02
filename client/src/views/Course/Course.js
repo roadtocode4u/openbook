@@ -5,6 +5,7 @@ import "./Course.css";
 
 import StudyMaterialCard from '../../components/StudyMaterialCard/StudyMaterialCard';
 import Loader from './../../components/Loader/Loader';
+import HelmetComponent from '../../components/HelmetComponent/HelmetComponent';
 
 function Course() {
   const [searchParams] = useSearchParams();
@@ -51,6 +52,10 @@ function Course() {
 
   return (
     <div>
+      <HelmetComponent>
+        <title>{course?.title} - Open-Book/Course</title>
+        <meta name="description" content={`Explore ${course?.title} course materials`} />
+      </HelmetComponent>
       <div className='container'>
         <div className='row course-header'>
           <div className='col-md-4 '><img className='image-logo' src={course?.thumbnail} /></div>
