@@ -4,6 +4,7 @@ import StudyMaterialHeaderImg from './img/study-material-header-img.png'
 import axios from 'axios';
 import swal from "sweetalert";
 import { isAdmin } from '../../utils/util';
+import HelmetComponent from '../../components/HelmetComponent/HelmetComponent';
 
 function StudyMaterial() {
 
@@ -70,6 +71,8 @@ function StudyMaterial() {
   }
   return (
     <>
+    <HelmetComponent title="Open-Book - Add Study Material" 
+     description="Contribute to Open-Book by adding study materials. Help fellow learners access valuable resources for their academic journey. Contribute study materials conveniently and make a positive impact!"/>
       <div className="container">
         <div className="studymaterial-card">
           <div className="row">
