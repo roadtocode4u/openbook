@@ -12,6 +12,8 @@ import YouTube from './img/you-tube-logo.png';
 import Instagram from './img/instagram-logo.png';
 import  subjectMaps  from '../../utils/subjectMaps.json';
 import SubjectCard from './../../components/SubjectCard/SubjectCard';
+import HelmetComponent from '../../components/HelmetComponent/HelmetComponent';
+
 function Home() {
 
   const [branch, setBranch] = useState(localStorage.getItem("branch") || '');
@@ -30,6 +32,8 @@ function Home() {
 
   return (
     <>
+    <HelmetComponent title="Open-Book - Learn, Build, Connect" 
+     description="Access study materials, enhance learning, develop projects, and connect with a community of developers. Learn faster and study better with Open-Book." />
       <div className='container'>
         <div className='row'>
           <div className='col-md-6'>
